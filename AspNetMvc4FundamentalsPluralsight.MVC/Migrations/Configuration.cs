@@ -19,7 +19,8 @@ namespace AspNetMvc4FundamentalsPluralsight.MVC.Migrations
             context.Departments.AddOrUpdate(x => x.Name,
                 new Department() { Name = "Engineering" },
                 new Department { Name = "IT" },
-                new Department { Name = "Human Resources" }
+                new Department { Name = "Human Resources" },
+                new Department {Name="Sales"}
                 );
         }
     }

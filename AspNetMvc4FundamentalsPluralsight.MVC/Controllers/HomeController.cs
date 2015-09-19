@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AspNetMvc4FundamentalsPluralsight.DAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,9 +9,18 @@ namespace AspNetMvc4FundamentalsPluralsight.MVC.Controllers
 {
     public class HomeController : Controller
     {
+        private ICompanyDataSource _db;
+
+        public HomeController(ICompanyDataSource db)
+        {
+            _db = db;
+        }
+
         public ActionResult Index()
         {
-            return View();
+            var allDepartments = _db.Departments;
+
+            return View(allDepartments);
         }
 
         public ActionResult About()

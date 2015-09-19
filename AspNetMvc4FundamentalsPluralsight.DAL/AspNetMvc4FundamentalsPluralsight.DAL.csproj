@@ -41,7 +41,7 @@
   <ItemGroup>
     <Compile Include="Department.cs" />
     <Compile Include="Employee.cs" />
-    <Compile Include="IDepartmentDataSource.cs" />
+    <Compile Include="ICompanyDataSource.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

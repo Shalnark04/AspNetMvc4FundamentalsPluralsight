@@ -1,0 +1,25 @@
+﻿using AspNetMvc4FundamentalsPluralsight.DAL;
+using System;
+using System.Collections.Generic;
+using System.Data.Entity;
+using System.Linq;
+using System.Web;
+
+namespace AspNetMvc4FundamentalsPluralsight.MVC.Infrastructure
+{
+    public class CompanyDb : DbContext, ICompanyDataSource
+    {
+        public DbSet<Employee> Employees { get; set; }
+        public DbSet<Department> Departments { get; set; }
+
+        IQueryable<Employee> ICompanyDataSource.Employees
+        {
+            get { return Employees; }
+        }
+
+        IQueryable<Department> ICompanyDataSource.Departments
+        {
+            get { return Departments; }
+        }
+    }
+}

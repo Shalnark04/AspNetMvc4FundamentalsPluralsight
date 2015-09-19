@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AspNetMvc4FundamentalsPluralsight.DAL
 {
-    public interface IDepartmentDataSource
+    public interface ICompanyDataSource
     {
         IQueryable<Employee> Employees { get; }
         IQueryable<Department> Departments { get; }

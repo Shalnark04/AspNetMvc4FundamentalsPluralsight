@@ -11,7 +11,7 @@ namespace AspNetMvc4FundamentalsPluralsight.MVC {
                                         scan.TheCallingAssembly();
                                         scan.WithDefaultConventions();
                                     });
-                            x.For<ICompanyDataSource>().HttpContextScoped().Use<CompanyDb>();
+                            x.For<ICompanyDataSource>().HttpContextScoped().Use<CompanyRepository>();
                         });
             return ObjectFactory.Container;
         }

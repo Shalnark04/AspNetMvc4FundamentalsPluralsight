@@ -7,7 +7,7 @@ using System.Web;
 
 namespace AspNetMvc4FundamentalsPluralsight.MVC.Infrastructure
 {
-    public class CompanyDb : DbContext, ICompanyDataSource
+    public class CompanyRepository : DbContext, ICompanyDataSource
     {
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Department> Departments { get; set; }

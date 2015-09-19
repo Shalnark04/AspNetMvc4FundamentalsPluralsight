@@ -6,7 +6,7 @@ namespace AspNetMvc4FundamentalsPluralsight.MVC.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<AspNetMvc4FundamentalsPluralsight.MVC.Infrastructure.CompanyDb>
+    internal sealed class Configuration : DbMigrationsConfiguration<AspNetMvc4FundamentalsPluralsight.MVC.Infrastructure.CompanyRepository>
     {
         public Configuration()
         {
@@ -14,7 +14,7 @@ namespace AspNetMvc4FundamentalsPluralsight.MVC.Migrations
         }
 
         //every time the schema will change/database will be recreated, make sure the database will be populated with departments listed below
-        protected override void Seed(AspNetMvc4FundamentalsPluralsight.MVC.Infrastructure.CompanyDb context)
+        protected override void Seed(AspNetMvc4FundamentalsPluralsight.MVC.Infrastructure.CompanyRepository context)
         {
             context.Departments.AddOrUpdate(x => x.Name,
                 new Department() { Name = "Engineering" },

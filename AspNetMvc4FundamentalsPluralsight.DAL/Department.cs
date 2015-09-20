@@ -11,5 +11,10 @@ namespace AspNetMvc4FundamentalsPluralsight.DAL
         public virtual int DepartmentId { get; set; }
         public virtual string Name { get; set; }
         public virtual IEnumerable<Employee> Employees { get; set; }
+
+        public Department()
+        {
+            Employees = new List<Employee>();
+        }
     }
 }

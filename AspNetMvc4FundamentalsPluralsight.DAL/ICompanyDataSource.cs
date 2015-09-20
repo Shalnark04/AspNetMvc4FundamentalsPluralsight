@@ -10,5 +10,7 @@ namespace AspNetMvc4FundamentalsPluralsight.DAL
     {
         IQueryable<Employee> Employees { get; }
         IQueryable<Department> Departments { get; }
+
+        void Save();
     }
 }

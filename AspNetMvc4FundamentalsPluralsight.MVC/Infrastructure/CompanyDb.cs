@@ -21,5 +21,10 @@ namespace AspNetMvc4FundamentalsPluralsight.MVC.Infrastructure
         {
             get { return Departments; }
         }
+
+        public void Save()
+        {
+            SaveChanges();
+        }
     }
 }

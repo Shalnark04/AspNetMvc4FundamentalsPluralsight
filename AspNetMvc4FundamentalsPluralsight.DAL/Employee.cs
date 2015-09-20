@@ -10,5 +10,6 @@ namespace AspNetMvc4FundamentalsPluralsight.DAL
     {
         public virtual int EmployeeId { get; set; }
         public virtual string Name { get; set; }
+        public virtual DateTime? HireDate { get; set; }
     }
 }

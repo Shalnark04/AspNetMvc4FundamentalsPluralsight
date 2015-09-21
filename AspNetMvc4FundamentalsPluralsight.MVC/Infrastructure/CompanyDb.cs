@@ -9,6 +9,12 @@ namespace AspNetMvc4FundamentalsPluralsight.MVC.Infrastructure
 {
     public class CompanyDb : DbContext, ICompanyDataSource
     {
+        public CompanyDb()
+            : base("DefaultConnection")// connectionstring name define in your web.config
+        {
+
+        }
+
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Department> Departments { get; set; }
 

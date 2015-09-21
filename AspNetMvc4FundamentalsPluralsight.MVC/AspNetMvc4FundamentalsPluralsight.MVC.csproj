@@ -184,6 +184,14 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\AspNetMvc4FundamentalsPluralsight.mdf" />
+    <Content Include="App_Data\AspNetMvc4FundamentalsPluralsight.MVC.Infrastructure.CompanyRepository.mdf" />
+    <Content Include="App_Data\AspNetMvc4FundamentalsPluralsight.MVC.Infrastructure.CompanyRepository_log.ldf">
+      <DependentUpon>AspNetMvc4FundamentalsPluralsight.MVC.Infrastructure.CompanyRepository.mdf</DependentUpon>
+    </Content>
+    <Content Include="App_Data\AspNetMvc4FundamentalsPluralsight_log.ldf">
+      <DependentUpon>AspNetMvc4FundamentalsPluralsight.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
@@ -237,9 +245,7 @@
     <Content Include="Views\Department\Details.cshtml" />
     <Content Include="Views\Employee\Create.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />

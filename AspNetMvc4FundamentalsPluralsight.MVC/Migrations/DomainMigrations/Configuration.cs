@@ -1,4 +1,4 @@
-namespace AspNetMvc4FundamentalsPluralsight.MVC.Migrations
+namespace AspNetMvc4FundamentalsPluralsight.MVC.Migrations.DomainMigrations
 {
     using AspNetMvc4FundamentalsPluralsight.DAL;
     using System;
@@ -11,17 +11,14 @@ namespace AspNetMvc4FundamentalsPluralsight.MVC.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
+            MigrationsDirectory = @"Migrations\DomainMigrations";
         }
 
-        //every time the schema will change/database will be recreated, make sure the database will be populated with departments listed below
         protected override void Seed(AspNetMvc4FundamentalsPluralsight.MVC.Infrastructure.CompanyDb context)
         {
             context.Departments.AddOrUpdate(x => x.Name,
-                new Department() { Name = "Engineering" },
-                new Department { Name = "IT" },
-                new Department { Name = "Human Resources" },
-                new Department {Name="Sales"}
-                );
+                new Department { Name = "Engineering" },
+                new Department { Name = "Production" });
         }
     }
 }

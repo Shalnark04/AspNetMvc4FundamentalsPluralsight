@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 
 namespace AspNetMvc4FundamentalsPluralsight.MVC.Controllers
 {
@@ -19,6 +20,8 @@ namespace AspNetMvc4FundamentalsPluralsight.MVC.Controllers
         public ActionResult Index()
         {
             var allDepartments = _db.Departments;
+
+            var gx = Membership.GetAllUsers();
 
             return View(allDepartments);
         }

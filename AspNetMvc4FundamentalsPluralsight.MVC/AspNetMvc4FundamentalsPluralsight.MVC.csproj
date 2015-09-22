@@ -176,7 +176,20 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\CompanyDb.cs" />
-    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Migrations\DomainMigrations\201509221228419_Init.cs" />
+    <Compile Include="Migrations\DomainMigrations\201509221228419_Init.Designer.cs">
+      <DependentUpon>201509221228419_Init.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\DomainMigrations\Configuration.cs" />
+    <Compile Include="Migrations\UserManagementMigrations\201509220213087_InitialCreate.cs" />
+    <Compile Include="Migrations\UserManagementMigrations\201509220213087_InitialCreate.Designer.cs">
+      <DependentUpon>201509220213087_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\UserManagementMigrations\201509221230532_Init.cs" />
+    <Compile Include="Migrations\UserManagementMigrations\201509221230532_Init.Designer.cs">
+      <DependentUpon>201509221230532_Init.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\UserManagementMigrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\EmployeeViewModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -245,7 +258,6 @@
     <Content Include="Views\Department\Details.cshtml" />
     <Content Include="Views\Employee\Create.cshtml" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -258,6 +270,17 @@
       <Project>{24e00553-dd79-4278-bcda-f33b79f908d4}</Project>
       <Name>AspNetMvc4FundamentalsPluralsight.DAL</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\DomainMigrations\201509221228419_Init.resx">
+      <DependentUpon>201509221228419_Init.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\UserManagementMigrations\201509220213087_InitialCreate.resx">
+      <DependentUpon>201509220213087_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\UserManagementMigrations\201509221230532_Init.resx">
+      <DependentUpon>201509221230532_Init.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -17,6 +17,7 @@ namespace AspNetMvc4FundamentalsPluralsight.MVC.Controllers
             _db = db;
         }
 
+        [Authorize(Roles="Admin")]
         public ActionResult Create(int departmentId)
         {
             var vm = new EmployeeViewModel();
@@ -24,7 +25,7 @@ namespace AspNetMvc4FundamentalsPluralsight.MVC.Controllers
             return View(vm);
         }
 
-
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public ActionResult Create(EmployeeViewModel vm)
         {

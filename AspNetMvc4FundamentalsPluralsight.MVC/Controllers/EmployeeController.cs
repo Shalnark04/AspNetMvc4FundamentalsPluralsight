@@ -26,6 +26,7 @@ namespace AspNetMvc4FundamentalsPluralsight.MVC.Controllers
         }
 
         [Authorize(Roles = "Admin")]
+        [ValidateAntiForgeryToken]
         [HttpPost]
         public ActionResult Create(EmployeeViewModel vm)
         {

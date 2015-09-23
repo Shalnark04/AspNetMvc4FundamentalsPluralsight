@@ -189,6 +189,10 @@
     <Compile Include="Migrations\UserManagementMigrations\201509221230532_Init.Designer.cs">
       <DependentUpon>201509221230532_Init.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\UserManagementMigrations\201509231257275_Updated Username.cs" />
+    <Compile Include="Migrations\UserManagementMigrations\201509231257275_Updated Username.Designer.cs">
+      <DependentUpon>201509231257275_Updated Username.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\UserManagementMigrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\EmployeeViewModel.cs" />
@@ -280,6 +284,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\UserManagementMigrations\201509221230532_Init.resx">
       <DependentUpon>201509221230532_Init.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\UserManagementMigrations\201509231257275_Updated Username.resx">
+      <DependentUpon>201509231257275_Updated Username.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

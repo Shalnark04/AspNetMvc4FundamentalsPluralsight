@@ -19,14 +19,14 @@ namespace AspNetMvc4FundamentalsPluralsight.MVC.Migrations.UserManagementMigrati
 
         protected override void Seed(AspNetMvc4FundamentalsPluralsight.MVC.Models.ApplicationDbContext context)
         {
-            if(!context.Users.Any(x=>x.UserName=="lbebenek"))
+            if(!context.Users.Any(x=>x.UserName=="lbebenek@khprint.com"))
             {
                 var roleStore = new RoleStore<IdentityRole>(context);
                 var roleManager = new RoleManager<IdentityRole>(roleStore);
 
                 var userStore = new UserStore<ApplicationUser>(context);
                 var userManager = new UserManager<ApplicationUser>(userStore);
-                var user = new ApplicationUser { UserName = "lbebenek" };
+                var user = new ApplicationUser { UserName = "lbebenek@khprint.com" };
 
                 userManager.Create(user, "password");
                 roleManager.Create(new IdentityRole { Name = "Admin" });

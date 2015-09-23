@@ -21,8 +21,6 @@ namespace AspNetMvc4FundamentalsPluralsight.MVC.Controllers
         {
             var allDepartments = _db.Departments;
 
-            var gx = Membership.GetAllUsers();
-
             return View(allDepartments);
         }
 

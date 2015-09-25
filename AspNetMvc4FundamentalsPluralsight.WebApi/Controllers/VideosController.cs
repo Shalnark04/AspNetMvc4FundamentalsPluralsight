@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AspNetMvc4FundamentalsPluralsight.WebApi.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -9,10 +10,18 @@ namespace AspNetMvc4FundamentalsPluralsight.WebApi.Controllers
 {
     public class VideosController : ApiController
     {
-        // GET: api/Videos
-        public IEnumerable<string> Get()
+        private VideoDb _db;
+
+        public VideosController()
         {
-            return new string[] { "value1", "value2" };
+            _db = new VideoDb();
+            _db.Configuration.ProxyCreationEnabled = false;
+        }
+
+        // GET: api/Videos
+        public IEnumerable<Video> Get()
+        {
+            return _db.Videos;
         }
 
         // GET: api/Videos/5
